@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl" dir="">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Ether Project {{time}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+        <!-- CSS Reset -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+        <!-- Milligram -->
+        <link rel="stylesheet" href="css/milligram.css">
+        <link rel="stylesheet" href="css/main.css" />
+
+        <script src="assets/sha256.js"></script>
+
+    </head>
+
+    <body>
+
+        <main class="wrapper">
+            <header class="header" id="home">
+                <section class="container">
+                <div class="row">
+                <div class="column column-100" style="margin: auto; text-align: center;">
+                    <h1 class="title" style="font-size: 6em">Ether</h1>
+                    <p class="description">Ether Project owns me and all - if it ever releases that is.
+                    </p>
+                    {% if purchased == "false" %}
+                    <a class="button" href="#">Purchase</a>
+                    {% endif %}
+                    </div>
+                </div>
+                </section>
+            </header>
+
+            <section class="container">
+                 <div class="column column-100" style="margin: auto; text-align: center; border-style: solid; border-width: 1px; padding-top: 3px; padding-left: 3px; padding-right: 3px;">
+                    <form action="/login" method="post">
+                        <fieldset>
+                            <label for="username">Email</label>
+                            <input type="text" placeholder="someone@gmail.com" id="username" name="username" required>
+                             <div class="invalid-feedback">
+                                        Please specify a username
+                                    </div>
+                            <label for="password">Password
+                                <p class="description"> Minimum length of 8 characters</p>
+                            </label>
+                            <input type="password" placeholder="Enter your password..." id="password" name="password" required>
+                            <div class="invalid-feedback">
+                                        A password is requierd.
+                            </div>
+                            <input class="button-primary" type="submit" value="send">
+                        </fieldset>
+                    </form>
+                 </div>
+                </section>
+        </main>
+    </body>
+</html>
